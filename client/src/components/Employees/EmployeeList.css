@@ -1,0 +1,121 @@
+/* Estilo específico para el contenedor del EmployeeList */
+.employee-list-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Estilo para el título del EmployeeList */
+.employee-list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Estilo del formulario dentro del EmployeeList */
+.employee-list-container .employee-form {
+  margin-bottom: 20px;
+}
+
+/* Grupo de formulario */
+.employee-list-container .form-group {
+  margin-bottom: 15px;
+}
+
+/* Etiquetas */
+.employee-list-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Campos de entrada */
+.employee-list-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Botones generales */
+.employee-list-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Botón para agregar empleados */
+.employee-list-container .add-button {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+}
+
+.employee-list-container .add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Tabla de empleados */
+.employee-list-container .employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-list-container .employee-table th,
+.employee-list-container .employee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.employee-list-container .employee-table th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Botón para editar empleados */
+.employee-list-container .edit-button {
+  background-color: #ffc107;
+  color: black;
+  margin-right: 5px;
+}
+
+.employee-list-container .edit-button:hover {
+  background-color: #e0a800;
+}
+
+/* Botón para eliminar empleados */
+.employee-list-container .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.employee-list-container .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Botón para ir al Home */
+.employee-list-container .home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.employee-list-container .home-button:hover {
+  background-color: #218838;
+}

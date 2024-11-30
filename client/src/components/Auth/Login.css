@@ -1,0 +1,89 @@
+/* Contenedor principal del login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo del título */
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estilo del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos de entrada */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo del botón */
+.login-button {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Efecto hover en el botón */
+.login-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Efecto focus en los campos de entrada */
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Asegura que el diseño sea responsivo */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 0 10px;
+  }
+}

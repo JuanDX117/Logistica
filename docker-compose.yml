@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  client:
+    build:
+      context: ./client                 # Carpeta donde está tu código del cliente (React)
+      dockerfile: Dockerfile            # Nombre del Dockerfile (opcional si es "Dockerfile")
+    image: juandx11/app-logistica:client
+    ports:
+      - "3000:3000"                     # Exponer React en el puerto 3000
+    networks:
+      - app-network                     # Conexión con la red interna
+    depends_on:
+      - server                          # Asegurarse de que el servidor esté listo antes
+
+  server:
+    build:
+      context: ./server                 # Carpeta donde está tu código del servidor (Node.js)
+      dockerfile: Dockerfile
+    image: juandx11/app-logistica:server
+    ports:
+      - "5000:5000"                     # Exponer el servidor en el puerto 5000
+    environment:
+      - DATABASE_URL=mysql://root@database:3306/AppLogistica
+    networks:
+      - app-network
+    depends_on:
+      - database                        # Asegurarse de que la base de datos esté lista antes
+
+  database:
+    image: mysql:8.0                    # Imagen oficial de MySQL (versión 8.0)
+    container_name: mysql-database      # Nombre del contenedor de la base de datos
+    ports:
+      - "3306:3306"                     # Puerto por defecto de MySQL
+    environment:
+      MYSQL_ROOT_PASSWORD: ""           # Sin contraseña para root
+      MYSQL_DATABASE: AppLogistica      # Nombre de la base de datos
+    volumes:
+      - db-data:/var/lib/mysql          # Volumen persistente para la base de datos
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge                      # Red interna para comunicación entre servicios
+
+volumes:
+  db-data:

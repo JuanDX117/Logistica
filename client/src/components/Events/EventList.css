@@ -1,0 +1,231 @@
+/* Contenedor principal */
+.event-list-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado principal */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.header .home-button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Cambié el color para que coincida con el estilo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header .home-button:hover {
+    background-color: #218838; /* Color al hacer hover */
+}
+
+/* Formulario de creación */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Color azul para botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3; /* Hover del botón */
+}
+
+/* Eventos */
+.event-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Botones de evento */
+.event-item button {
+    padding: 8px 12px;
+    margin: 5px 5px 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-item button:hover {
+    opacity: 0.9;
+}
+
+.event-item button:nth-child(1) {
+    background-color: #ceccc8;
+    color: #212529;
+}
+
+.event-item button:nth-child(1):hover {
+    background-color: #ceccc8;
+}
+
+.event-item button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.event-item button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Asignaciones (Colapsables) */
+.assign-section {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.assign-section h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.assign-section select,
+.assign-section button {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.assign-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.assign-section table th,
+.assign-section table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.assign-section table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.assign-section table td {
+    font-size: 14px;
+}
+
+/* Botones para acciones en asignaciones */
+.assign-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.assign-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para Collapse */
+.collapse {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.collapse.show {
+    display: block;
+}
+
+.collapse-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.collapse-content {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .event-item {
+        padding: 10px;
+    }
+
+    .assign-section {
+        padding: 10px;
+    }
+
+    .assign-section table th,
+    .assign-section table td {
+        font-size: 12px;
+    }
+}
